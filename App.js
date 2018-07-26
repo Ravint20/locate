@@ -1,12 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View,TextInput } from 'react-native';
+import { StyleSheet, Text, View,TextInput,Picker } from 'react-native';
 import Input from './components/Input';
 import {MapView} from "expo";
-
-
-
-
-
 
 
 export default class App extends React.Component {
@@ -14,7 +9,18 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
      
-        <Input />
+      <Picker
+       style={{ flex:1}}
+  >
+  <Picker.Item label="Java" value="java" />
+  <Picker.Item label="JavaScript" value="js" />
+</Picker>
+
+<View style={styles.input}>
+    <Input />
+
+</View>
+        
       <MapView 
        style={styles.map}
        initialRegion={{
@@ -24,9 +30,6 @@ export default class App extends React.Component {
         longitudeDelta: 0.0421
       }}
        />
-       
-       
-       
 
       </View>
       
@@ -42,6 +45,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  input:{
+
+    marginTop:100
+  },
+
   map:{
 
     width:"100%",
@@ -49,3 +57,4 @@ const styles = StyleSheet.create({
   }
 
 });
+
