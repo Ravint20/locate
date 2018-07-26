@@ -14,8 +14,13 @@ export default class Input extends Component {
    />
 </View>
 </View>
-         )
+        
+      )
+      
 }
+
+
+
 
 }
 
@@ -27,4 +32,6 @@ const styles = StyleSheet.create({
   input : {
    width:300
   }
+  
+});
   
