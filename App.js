@@ -5,10 +5,15 @@ import {MapView} from "expo";
 
 
 
+
+
+
+
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+     
         <Input />
       <MapView 
        style={styles.map}
@@ -19,6 +24,10 @@ export default class App extends React.Component {
         longitudeDelta: 0.0421
       }}
        />
+       
+       
+       
+
       </View>
       
     )
