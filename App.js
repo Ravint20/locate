@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View,TextInput,Picker } from 'react-native';
 import Input from './components/Input';
 import {MapView} from "expo";
+import Actionbutton from './components/Actionbutton';
 
 
 export default class App extends React.Component {
@@ -31,6 +32,8 @@ export default class App extends React.Component {
         longitudeDelta: 0.0421
       }}
        />
+
+       <Actionbutton />
 
       </View>
       
