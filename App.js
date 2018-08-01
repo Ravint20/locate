@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View,TextInput,Picker } from 'react-native';
+import { StyleSheet, Text, View,TextInput} from 'react-native';
 import Input from './components/Input';
 import {MapView} from "expo";
 import Actionbutton from './components/Actionbutton';
+import PickerSelect from './components/Picker';
 
 
 export default class App extends React.Component {
@@ -10,12 +11,9 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
      
-      <Picker>
-  <Picker.Item label="Java" value="java" />
-  <Picker.Item label="JavaScript" value="js" />
- 
-</Picker>
-
+    <View>
+    <PickerSelect />
+</View>   
 
 
 <View style={styles.input}>
