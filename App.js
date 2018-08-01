@@ -9,12 +9,13 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
      
-      <Picker
-       style={{ flex:1}}
-  >
+      <Picker>
   <Picker.Item label="Java" value="java" />
   <Picker.Item label="JavaScript" value="js" />
+ 
 </Picker>
+
+
 
 <View style={styles.input}>
     <Input />
@@ -57,4 +58,3 @@ const styles = StyleSheet.create({
   }
 
 });
-
