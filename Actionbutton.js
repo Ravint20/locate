@@ -5,19 +5,22 @@ import ActionButton from 'react-native-action-button';
 
 export default class Actionbutton extends Component {
 
-render(){
+render()
+{
 
 return(
 
 <ActionButton 
-   size={80}
+  size={80}
   buttonColor="rgba(231,76,60,1)"
   onPress={() => { console.log("hi")}}
-/>
+  offsetY={50}
+  />
+  
+  
 
 )
 
 }
 
 }
-
