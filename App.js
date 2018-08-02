@@ -11,15 +11,10 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
      
-    <View>
-    <PickerSelect />
-</View>   
+   
 
 
-<View style={styles.input}>
-    <Input />
 
-</View>
         
       <MapView 
        style={styles.map}
@@ -29,7 +24,24 @@ export default class App extends React.Component {
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421
       }}
+       
        />
+
+        <View>
+    <PickerSelect />
+</View> 
+
+  <View style={styles.input}>
+    <Input />
+
+</View>
+
+       
+      
+
+      <View style={styles.box}>
+
+      </View>
 
        <Actionbutton />
 
@@ -48,14 +60,24 @@ const styles = StyleSheet.create({
   },
 
   input:{
+    
+     
 
-    marginTop:100
   },
 
   map:{
-
-    width:"100%",
+   width:"100%",
     height:"100%"
+  },
+
+  box:
+  {
+    justifyContent:"flex-end",
+    width:"100%",
+    height:"50%",
+    backgroundColor:"#ffffff",
+    opacity:0.5
+
   }
 
 });
