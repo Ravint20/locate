@@ -19,9 +19,6 @@ return(
       }}
        
        />
-
-
-
 )
 
 }
@@ -31,8 +28,7 @@ return(
 const styles = StyleSheet.create({
 
     map:{
-        width:"100%",
-         height:"75%"
+        flex:1
        },
      
 
