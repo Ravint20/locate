@@ -50,7 +50,7 @@ export default class PickerSelect extends Component {
  return(
 
     <View style={styles.container}>
-    <Picker  style={{width:"100%", top:10}} mode="dropdown"
+    <Picker  style={{width:"100%", top:20,height:60,backgroundColor:"black"}} mode="dropdown"
       
       selectedValue={this.state.language}
       onValueChange={itemValue => this.setState({ language: itemValue })}>
@@ -67,13 +67,15 @@ export default class PickerSelect extends Component {
 
  const styles=StyleSheet.create({
     container:{
-
+      
     },
+
     picker:{
+      flex:1,
         backgroundColor:"black",
-        marginTop:100,
-        height:30,
-         width:300
+        marginTop:200,
+        height:20,
+         width:"100%"
 
     }
  })
