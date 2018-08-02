@@ -50,7 +50,7 @@ export default class PickerSelect extends Component {
  return(
 
     <View style={styles.container}>
-    <Picker style={{width:"100%"}} mode="dropdown"
+    <Picker  style={{width:"100%", top:10}} mode="dropdown"
       
       selectedValue={this.state.language}
       onValueChange={itemValue => this.setState({ language: itemValue })}>
@@ -70,10 +70,10 @@ export default class PickerSelect extends Component {
 
     },
     picker:{
-      
-        marginTop:40,
+        backgroundColor:"black",
+        marginTop:100,
         height:30,
-         width:100
+         width:300
 
     }
  })
