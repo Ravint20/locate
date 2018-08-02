@@ -1,6 +1,8 @@
 import React,{Component} from "react";
-import {Text,StyleSheet,View,TextInput} from 'react-native';
+import {Text,StyleSheet,View,TextInput,Platform} from 'react-native';
 import {SearchBar} from "react-native-elements";
+
+
 
 export default class Input extends Component {
     render(){
@@ -10,17 +12,16 @@ export default class Input extends Component {
  
 <View style={styles.input}>
   <SearchBar
-  placeholder="search on google map" 
-   />
+    placeholder="search on google map" 
+  />
+
+
 </View>
 </View>
         
-      )
+ )
       
 }
-
-
-
 
 }
 
@@ -30,9 +31,10 @@ const styles = StyleSheet.create({
   
   },
   input : {
-    justifyContent:"center",
-   width:300,
-   
+     width:350,
+      left:10,
+      top:0,
+      padding:15
   }
   
 });
