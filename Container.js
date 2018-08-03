@@ -21,12 +21,12 @@ export default class Container extends Component {
     const styles = StyleSheet.create({
 
         box:
-        { flex:1,
-          justifyContent:"flex-end",
+        { 
+          flex:0.4,
           width:"100%",
-          height:"30%",
+          height:"10%",
           backgroundColor:"#ffffff",
-          opacity:0.5
+          opacity:0.3
       
         }
 
