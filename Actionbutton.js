@@ -8,13 +8,16 @@ export default class Actionbutton extends Component {
 render()
 {
 
+
 return(
 
 <ActionButton 
   size={80}
-  buttonColor="rgba(231,76,60,1)"
+  buttonColor="#FF9900"
   onPress={() => { console.log("hi")}}
-  offsetY={50}
+  offsetY={20}
+  offsetX={20}
+
   />
   
   
