@@ -5,6 +5,7 @@ import Map from './components/Map';
 import Actionbutton from './components/Actionbutton';
 import PickerSelect from './components/Picker';
 import Container from './components/Container';
+import Thermometer from './components/Thermometer';
 
 export default class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ export default class App extends React.Component {
         
          <Container />
         <Actionbutton />
+        <Thermometer />
 
       
       </View>
@@ -33,3 +35,4 @@ const styles = StyleSheet.create({
     
   },
 });
+
