@@ -11,6 +11,8 @@ export default class Container extends Component {
 
         <View style={styles.box}>
 
+        <Text fontSize={50} style={{color:"black"}}> CRYSBRO </Text>
+
         </View>
      )
 
@@ -22,9 +24,11 @@ export default class Container extends Component {
 
         box:
         { 
-          flex:0.4,
+
+          
+          flex:0.25,
           width:"100%",
-          height:"10%",
+         
           backgroundColor:"#ffffff",
           opacity:0.3
       
