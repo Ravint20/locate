@@ -54,8 +54,12 @@ export default class PickerSelect extends Component {
       
       selectedValue={this.state.language}
       onValueChange={itemValue => this.setState({ language: itemValue })}>
-       <Picker.Item label="Java" value="java" />
-     <Picker.Item label="JavaScript" value="js" />
+
+      
+       <Picker.Item  color="#ffffff" label="Java" value="java" />
+     <Picker.Item  color="#ffffff" label="JavaScript" value="js" />
+
+   
       
  </Picker>
 {/*
@@ -71,11 +75,11 @@ export default class PickerSelect extends Component {
     },
 
     picker:{
-      flex:1,
-        backgroundColor:"black",
+
         marginTop:200,
         height:20,
          width:"100%"
+        
 
     }
  })
