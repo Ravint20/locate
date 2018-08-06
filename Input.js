@@ -10,18 +10,30 @@ export default class Input extends Component {
  return(
  <View style={styles.container}>
  
-<View style={styles.input}>
+
   <SearchBar
+
+    
     placeholder="search on google map" 
+    searchIcon={false}
+    showLoading
+    platform="android"
+    cancelIcon={{ type: 'font-awesome', name: 'chevron-left' }}
+    justifyContent="center"
+    alignItems="center"
+    
+    containerStyle={{ display:""}}
+
   />
 
 
-</View>
+
 </View>
         
  )
       
 }
+
 
 }
 
@@ -31,10 +43,12 @@ const styles = StyleSheet.create({
   
   },
   input : {
+  
      width:350,
-      left:10,
+      
       top:0,
-      padding:15
+      padding:10
+
   }
   
 });
