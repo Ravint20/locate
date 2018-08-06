@@ -13,15 +13,12 @@ export default class App extends React.Component {
       <View style={styles.container}>
            <PickerSelect />
            <Input />
-       
-             <Map />
-        
+           <Map />
          <Container />
         <Actionbutton />
         <Thermometer />
 
-      
-      </View>
+     </View>
       
     )
   }
@@ -29,10 +26,9 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+
+   flex:1,
    justifyContent:"center",
    
-    
   },
 });
-
