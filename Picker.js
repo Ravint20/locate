@@ -50,14 +50,14 @@ export default class PickerSelect extends Component {
  return(
 
     <View style={styles.container}>
-    <Picker  style={{width:"100%", top:20,height:60,backgroundColor:"black"}} mode="dropdown"
+    <Picker  style={{width:"100%", top:20,height:60,backgroundColor:"#434343"}} mode="dropdown"
       
       selectedValue={this.state.language}
       onValueChange={itemValue => this.setState({ language: itemValue })}>
 
       
-       <Picker.Item  color="#ffffff" label="Java" value="java" />
-     <Picker.Item  color="#ffffff" label="JavaScript" value="js" />
+       <Picker.Item   label="Java" value="java" />
+     <Picker.Item   label="JavaScript" value="js" />
 
    
       
