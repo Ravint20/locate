@@ -78,8 +78,8 @@ export default class PickerSelect extends Component {
 
         marginTop:200,
         height:20,
-         width:"100%"
-        
+         width:"100%",
+        padding:10
 
     }
  })
