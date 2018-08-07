@@ -5,6 +5,8 @@ import {
   GooglePlacesAutocomplete,
 } from 'react-native-google-places-autocomplete'; // 1.2.12
 
+
+
 const homePlace = {
   description: 'Home',
   geometry: { location: { lat: 48.8152937, lng: 2.4597668 } },
@@ -20,7 +22,7 @@ export default class GooglePlacesInput extends Component{
   render() {
 
     return (
-      <View style={{  flex: 0.125 }}>
+      <View style={{marginLeft:"5%",flex:1,width:"90%"}}>
 
         <GooglePlacesAutocomplete
           placeholder="Search on google map"
@@ -34,17 +36,21 @@ export default class GooglePlacesInput extends Component{
             
             console.log(data);
             console.log(details);
+            
+
           }}
 
           getDefaultValue={() => {
+
             return ''; // text input default value
           }}
-          
+
           query={{
             
             key: 'AIzaSyC2QhtACfVZ2cr9HVvxQuzxd3HT36NNK3Q',
             language: 'en', 
-            types: '(cities)', 
+            types: '(cities)',
+
           }}
           styles={{
             description: {
@@ -54,24 +60,30 @@ export default class GooglePlacesInput extends Component{
               color: '#1faadb',
             },
           }}
+
           currentLocation={true} 
           currentLocationLabel="Current location"
           nearbyPlacesAPI="GooglePlacesSearch" 
           GoogleReverseGeocodingQuery={{
            
           }}
+
           GooglePlacesSearchQuery={{
            
             rankby: 'distance',
             types: 'food',
           }}
+
           filterReverseGeocodingByTypes={[
+
             'locality',
             'administrative_area_level_3',
+
           ]} 
           predefinedPlaces={[homePlace, workPlace]}
           debounce={200}
         />
+
       </View>
     );
   }
