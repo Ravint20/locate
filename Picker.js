@@ -50,7 +50,7 @@ export default class PickerSelect extends Component {
  return(
 
     <View style={styles.container}>
-    <Picker  style={{padding:10,width:"100%", top:"40%",height:60,backgroundColor:"#434343"}} mode="dropdown"
+    <Picker  style={{padding:10,width:"100%",backgroundColor:"#434343"}} mode="dropdown"
       
       selectedValue={this.state.language}
       onValueChange={itemValue => this.setState({ language: itemValue })}>
@@ -58,10 +58,9 @@ export default class PickerSelect extends Component {
       
        <Picker.Item   label="Java" value="java" />
        <Picker.Item   label="JavaScript" value="js" />
+    
+ </Picker> 
 
-   
-      
- </Picker>
 {/*
 <Modal visible={true} transparent={true} style={{backgroundColor:"efefef"}} onRequestClose={() => console.log("hi")}></Modal>
 */}
@@ -69,15 +68,14 @@ export default class PickerSelect extends Component {
 
  )}}
 
-
+ 
  const styles=StyleSheet.create({
     container:{
-      
+  
     },
 
     picker:{
-
-        marginTop:200,
+         
         height:20,
          width:"100%",
         padding:10
