@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import { Constants } from 'expo';
-import { View,SafeAreaView,ScrollView } from 'react-native';
+import { View,SafeAreaView,ScrollView,StyleSheet} from 'react-native';
 import {
   GooglePlacesAutocomplete,
 } from 'react-native-google-places-autocomplete'; // 1.2.12
@@ -13,8 +13,9 @@ export default class GooglePlacesInput extends Component{
   render() {
 
     return (  
-      <View style={{marginLeft:"5%",flex:1,width:"90%",flexGrow:1,flexShrink:0}}> 
- 
+      <ScrollView contentContainerStyle={{flexGrow : 1, justifyContent : 'center'}}>
+      <View style={styles.container}> 
+  
          <GooglePlacesAutocomplete
          
       placeholder='Search'
@@ -27,10 +28,10 @@ export default class GooglePlacesInput extends Component{
       onPress={(data, details = null) => { // 'details' is provided when fetchDetails = true
         console.log(data, details);
       }}
-      
+       
       getDefaultValue={() => ''}  
       
-      query={{
+      query={{ 
         // available options: https://developers.google.com/places/web-service/autocomplete
         key: 'AIzaSyC2QhtACfVZ2cr9HVvxQuzxd3HT36NNK3Q',
         language: 'en', // language of the results
@@ -38,14 +39,8 @@ export default class GooglePlacesInput extends Component{
       }}
       
       styles={{
-        container: {
-          zIndex: 10,
-          overflow: 'visible', 
-          backgroundColor: 'blue',
-           
-            
-           
-        }, 
+
+
         textInputContainer: { 
           width: '100%' , 
           overflow: 'visible',
@@ -67,11 +62,13 @@ export default class GooglePlacesInput extends Component{
           elevation: 3,
           zIndex: 10,
           
+          
       },
  
         textinput:{  
           backgroundColor: 'transparent',
-          flex: 1
+          flex: 1,
+          height: 50,
         },
         description: { 
           fontWeight: 'bold'
@@ -99,9 +96,21 @@ export default class GooglePlacesInput extends Component{
       debounce={200} // debounce the requests in ms. Set to 0 to remove debounce. By default 0ms.
      
     />
+    
 
      
       </View>
+      </ScrollView >
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      justifyContent: 'center'
+
+  }
+
+})
