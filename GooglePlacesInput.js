@@ -12,8 +12,8 @@ import {
 export default class GooglePlacesInput extends Component{
   render() {
 
-    return (
-      <View style={{marginLeft:"5%",flex:1,width:"90%",}}>
+    return (  
+      <View style={{marginLeft:"5%",flex:1,width:"90%",flexGrow:1,flexShrink:0}}> 
  
          <GooglePlacesAutocomplete
          
@@ -42,15 +42,21 @@ export default class GooglePlacesInput extends Component{
           zIndex: 10,
           overflow: 'visible', 
           backgroundColor: 'blue',
-            flex:1
-         
+           
+            
+           
         }, 
-        textInputContainer: {
+        textInputContainer: { 
           width: '100%' , 
           overflow: 'visible',
           flexGrow: 1,
         display: 'flex', 
-      
+            backgroundColor:"rgb(255,100,200)",
+            borderTopWidth: 0,
+      borderBottomWidth: 0,
+      height: 50,
+      overflow: 'visible',
+      flexShrink:1
         
         }, 
 
@@ -59,7 +65,8 @@ export default class GooglePlacesInput extends Component{
           marginTop: 40,
           backgroundColor: 'green',
           elevation: 3,
-          zIndex: 10
+          zIndex: 10,
+          
       },
  
         textinput:{  
