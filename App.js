@@ -1,55 +1,48 @@
 import React from 'react';
-import { StyleSheet, Text, View,TextInput } from 'react-native';
-import {MapView} from "expo";
+import { StyleSheet, Text, View,TextInput,Platform} from 'react-native';
+import { Constants } from 'expo';
+
+import Map from './components/Map';
+import Actionbutton from './components/Actionbutton';
+import PickerSelect from './components/Picker';
+import GooglePlacesInput from './components/GooglePlacesInput';
+import Container from './components/Container';
 
 
 export default class App extends React.Component {
   render() {
-    return (
+    return ( 
+      
       <View style={styles.container}>
-     <View style={styles.input}>
-      <TextInput
-
-       placeholder="search on google map" 
+        <View style={styles.statusBar} />
        
-      />
-      </View>
-      <View style={{top:10}}>
-       <MapView 
-      
-        style={{ alignSelf: 'stretch', height: 500, width:400 }}
+        <Map />
+        <PickerSelect /> 
+        <GooglePlacesInput />
+       
+        <Container />
+        
+        <Actionbutton />
+        
 
-    
-      
-      initialRegion={{
-        latitude: 6.9173,
-        longitude: 79.8484,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421
-      }}
-       />
-       </View>
-
-       </View>
+     </View>
       
     )
   }
 }
 
 const styles = StyleSheet.create({
+
   container: {
-    flex:1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+   flex:1,
+   justifyContent:"center",
+   flexDirection:"column"
+
   },
 
-  input:{
+  statusBar: {
+    backgroundColor: "#292929",
+    height: Constants.statusBarHeight,
+  },
 
-    width:330,
-    height:50,
-    padding:10,
-    backgroundColor:"white",
-    opacity:1
-  }
 });
