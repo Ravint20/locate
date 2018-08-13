@@ -71,13 +71,18 @@ export default class PickerSelect extends Component {
  
  const styles=StyleSheet.create({
     container:{
-  
+       top:"2.95%",
+       position:'absolute', 
+       width:"100%"
     },
     picker:{
-         
+
+       
+       
         height:20,
          width:"100%",
-        padding:10
-
+        padding:10          
+          
+         
     }
  })
