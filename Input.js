@@ -21,6 +21,8 @@ export default class Input extends Component {
     cancelIcon={{ type: 'font-awesome', name: 'chevron-left' }}
     justifyContent="center"
     alignItems="center"
+    inputContainerStyle={ backgroundColor="#fff"}
+  
     
     
 
@@ -41,14 +43,14 @@ export default class Input extends Component {
 const styles = StyleSheet.create({
   container:{
   position:"absolute",
-  top:"10%",
-  width:"100%"
+   top:"7%", 
+  width:"100%",
+  
+ 
   },
   input : {
   
      width:"100%",
-      
-      
       padding:10
 
   }
