@@ -15,9 +15,9 @@ render(){
        
        <TouchableOpacity onPress={() =>{console.log("this is temperature")}} >
 
-       < Icon reverse={true} name='thermometer-3'    size={50}  color="red"   /> 
+       < Icon reverse={true} name='thermometer-3'    size={30}  color="red"   />  
         
-       </TouchableOpacity>
+       </TouchableOpacity>   
     
     </View>
 
