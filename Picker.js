@@ -73,7 +73,6 @@ export default class PickerSelect extends Component {
     container:{
   
     },
-
     picker:{
          
         height:20,
