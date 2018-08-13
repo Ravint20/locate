@@ -1,6 +1,5 @@
 import React from 'react';
-import React from 'react';
-import { StyleSheet, Text, View,TextInput,Platform} from 'react-native';
+import { StyleSheet, Text, View,TextInput,Platform,StatusBar} from 'react-native';
 import { Constants } from 'expo';
 
 import Map from './components/Map';
@@ -12,10 +11,11 @@ import Input from './components/Input';
 
 export default class App extends React.Component {
   render() {
+    
     return ( 
       
       <View style={styles.container}>
-        <View style={styles.statusBar} />
+        <StatusBar hidden={true} />
         
         <Map />
         <PickerSelect />
@@ -41,9 +41,6 @@ const styles = StyleSheet.create({
 
   },
 
-  statusBar: {
-    backgroundColor: "#292929",
-    height: Constants.statusBarHeight,
-  },
+  
 
 });
