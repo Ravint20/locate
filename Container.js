@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {Text,StyleSheet,View,TextInput,Picker,Modal} from 'react-native';
+import {Text,StyleSheet,View,TextInput,Picker,Modal,Image} from 'react-native';
 import Thermometer from './Thermometer'; 
 export default class Container extends Component {
 
@@ -10,9 +10,11 @@ export default class Container extends Component {
      return(
 
         <View style={styles.box}>
+         <View style={styles.text}>
+        <Text   style={{color:"black",fontSize:23}}> CRYSBRO </Text>
+        </View>
 
-        <Text fontSize={100}  style={{color:"black"}}> CRYSBRO </Text>
-
+        <Image style={styles.image} source={require("./image/crysbro.png")}/> 
         <Thermometer
         
           style={styles.thermo}    
@@ -31,7 +33,7 @@ export default class Container extends Component {
         { 
 
           
-          flex:0.25, 
+          flex:0.25,  
           width:"100%",
           backgroundColor:"#ffffff", 
           opacity:1,
@@ -44,6 +46,23 @@ export default class Container extends Component {
 
             position:"relative"
 
+        },
+
+        text:{ 
+            flex:1,
+         marginHorizontal:"30%", 
+          marginTop:40,
+          position:"absolute"
+        }, 
+
+        image:{
+ 
+      borderRadius:10,
+       width:70,
+       height:75,
+       left:10 ,
+       marginTop:13    
+ 
         }
 
 
