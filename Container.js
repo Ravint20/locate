@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Picker,Modal} from 'react-native';
-
+import Thermometer from './Thermometer'; 
 export default class Container extends Component {
 
     render()
@@ -11,8 +11,13 @@ export default class Container extends Component {
 
         <View style={styles.box}>
 
-        <Text fontSize={50} style={{color:"black"}}> CRYSBRO </Text>
+        <Text fontSize={100}  style={{color:"black"}}> CRYSBRO </Text>
 
+        <Thermometer
+        
+          style={styles.thermo}    
+         
+        />
         </View>
      )
 
@@ -26,13 +31,19 @@ export default class Container extends Component {
         { 
 
           
-          flex:0.25,
+          flex:0.25, 
           width:"100%",
-         
-          backgroundColor:"#ffffff",
-          opacity:0.3
+          backgroundColor:"#ffffff", 
+          opacity:1,
+          paddingBottom:0 
       
+        },
+
+        thermo:{
+
+            position:"relative"
+
         }
 
 
-    })
+    }) 
