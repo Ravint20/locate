@@ -13,11 +13,11 @@ render(){
 
     <View style={styles.thermo}>
        
-        <TouchableOpacity onPress={() =>{console.log("this is temperature")}}>
+       <TouchableOpacity onPress={() =>{console.log("this is temperature")}} >
 
-       < Icon name='thermometer-3' size={50}   />
-      
-       </TouchableOpacity>  
+       < Icon reverse={true} name='thermometer-3'    size={50}  color="red"   /> 
+        
+       </TouchableOpacity>
     
     </View>
 
@@ -31,8 +31,8 @@ const styles=StyleSheet.create({
 
     thermo:{
         
-       justifyContent:"center",
-       alignItems:"center"
+       paddingTop:"12%",     
+        alignItems:"center" 
     }
 
 })
