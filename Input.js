@@ -22,7 +22,7 @@ export default class Input extends Component {
     justifyContent="center"
     alignItems="center"
     
-    containerStyle={{ display:""}}
+    
 
   />
 
@@ -40,13 +40,15 @@ export default class Input extends Component {
 
 const styles = StyleSheet.create({
   container:{
-  
+  position:"absolute",
+  top:"10%",
+  width:"100%"
   },
   input : {
   
-     width:350,
+     width:"100%",
       
-      top:0,
+      
       padding:10
 
   }
