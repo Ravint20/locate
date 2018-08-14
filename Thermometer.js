@@ -10,7 +10,7 @@ render(){
 
 
     return(
-
+ 
     <View style={styles.thermo}>
        
        <TouchableOpacity onPress={() =>{console.log("this is temperature")}} >
@@ -31,8 +31,9 @@ const styles=StyleSheet.create({
 
     thermo:{
         
-       paddingTop:"12%",     
-        alignItems:"center" 
+       paddingTop:"16%",      
+        alignItems:"center" ,
+        
     }
 
 })
