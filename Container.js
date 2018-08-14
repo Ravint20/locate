@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import {Text,StyleSheet,View,TextInput,Picker,Modal,Image} from 'react-native';
+import {Text,StyleSheet,View,TextInput,Picker,Modal,Image,Dimensions,TouchableOpacity} from 'react-native';
 import Thermometer from './Thermometer'; 
 export default class Container extends Component {
 
@@ -15,12 +15,43 @@ export default class Container extends Component {
         </View>
 
         <Image style={styles.image} source={require("./image/crysbro.png")}/> 
-        <Thermometer
+       
+
+        <View
+           style={{
+           borderBottomColor: 'black', 
+           borderBottomWidth: 1, 
+           width:"100%" ,
+           opacity:0.1  ,
+                    
+               }}
+                />
+
+                <TouchableOpacity
+      style = {{
+        borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 4,
+        width: Dimensions.get('window').width * 0.15,
+        height: Dimensions.get('window').width * 0.15,
+        backgroundColor:'#434343',
+        justifyContent: 'center',  
+        alignItems: 'center',
+        opacity:0.2,
+        left:"42%" 
+      }}
+      underlayColor = '#ccc'
+      onPress = { () => alert('Yaay!') }
+    > 
+      
+    </TouchableOpacity>
+
+     <Thermometer
         
-          style={styles.thermo}    
-         
-        />
-        </View>
+        style={styles.thermo}    
+       
+      />
+
+    
+        </View>                     
      )
 
     }
