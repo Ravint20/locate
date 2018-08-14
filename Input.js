@@ -5,32 +5,32 @@ import {SearchBar} from "react-native-elements";
 
 
 export default class Input extends Component {
-    render(){
+    render(){ 
      
  return(
  <View style={styles.container}>
  
 
   <SearchBar
-
-    
-    placeholder="search on google map" 
+     Platform="default"    
+    style={styles.search}  
+    placeholder="Search Google Map" 
     searchIcon={false}
-    showLoading
-    platform="android"
+    showLoading={true} 
     cancelIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-    justifyContent="center"
+    justifyContent="center" 
     alignItems="center"
-    inputContainerStyle={ backgroundColor="#fff"}
-  
+    width="100%"
+    containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 4}} 
+    inputStyle={{backgroundColor: 'white',fontSize:15,paddingLeft:30} }  
+   
     
-    
-
+ 
   />
 
 
 
-</View>
+</View> 
         
  )
       
@@ -45,14 +45,21 @@ const styles = StyleSheet.create({
   position:"absolute",
    top:"7%", 
   width:"100%",
+ 
   
  
   },
   input : {
   
-     width:"100%",
+     width:"90%",
       padding:10
 
+  },
+  search:{
+
+   
+    
+
+
   }
-  
 });
