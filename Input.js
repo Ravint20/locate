@@ -1,7 +1,9 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Platform} from 'react-native';
 import {SearchBar} from "react-native-elements";
-
+import CancelIcon from './CancelIcon';
+import Microphone from './Microphone';
+import Hamburger from './Hamburger';
 
 
 export default class Input extends Component {
@@ -9,6 +11,7 @@ export default class Input extends Component {
      
  return(
  <View style={styles.container}>
+  
  
 
   <SearchBar
@@ -27,6 +30,10 @@ export default class Input extends Component {
     
  
   />
+   
+  <CancelIcon />
+  <Microphone />
+  <Hamburger />
 
 
 
