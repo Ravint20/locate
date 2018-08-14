@@ -23,6 +23,7 @@ export default class Container extends Component {
            borderBottomWidth: 1, 
            width:"100%" ,
            opacity:0.1  ,
+           
                     
                }}
                 />
@@ -36,10 +37,12 @@ export default class Container extends Component {
         justifyContent: 'center',  
         alignItems: 'center',
         opacity:0.2,
-        left:"42%" 
+        left:"42%",
+        bottom:0 ,
+        position:"absolute"
       }}
       underlayColor = '#ccc'
-      onPress = { () => alert('Yaay!') }
+     
     > 
       
     </TouchableOpacity>
@@ -75,7 +78,7 @@ export default class Container extends Component {
 
         thermo:{
 
-            position:"relative"
+            position:"absolute" 
 
         },
 
