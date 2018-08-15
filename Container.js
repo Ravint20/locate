@@ -24,6 +24,7 @@ export default class Container extends Component {
            width:"100%" ,
            opacity:0.1  ,
            
+           
                     
                }}
                 />
@@ -36,10 +37,11 @@ export default class Container extends Component {
         backgroundColor:'#434343',
         justifyContent: 'center',  
         alignItems: 'center',
-        opacity:0.2,
+        opacity:0.1,
         left:"42%",
         bottom:0 ,
-        position:"absolute"
+        position:"absolute",
+        borderColor:"#434343"
       }}
       underlayColor = '#ccc'
      
@@ -78,14 +80,15 @@ export default class Container extends Component {
 
         thermo:{
 
-            position:"absolute" 
+            position:"absolute" ,
+            
 
         },
 
         text:{ 
             flex:1,
          marginHorizontal:"30%", 
-          marginTop:40,
+          marginTop:20,
           position:"absolute"
         }, 
 
@@ -94,7 +97,7 @@ export default class Container extends Component {
       borderRadius:10,
        width:70,
        height:75,
-       left:10 ,
+       left:15 ,
        marginTop:13    
  
         }
