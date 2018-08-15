@@ -22,7 +22,8 @@ export default class Container extends Component {
            borderBottomColor: 'black', 
            borderBottomWidth: 1, 
            width:"100%" ,
-           opacity:0.1  ,
+           opacity:0.05  ,
+           marginBottom:30 
            
            
                     
