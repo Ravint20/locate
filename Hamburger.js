@@ -29,14 +29,14 @@ render(){
 
 const styles=StyleSheet.create({
    
-    humburger:{
+    hamburger:{
         
-          
-            
-        alignItems:"flex-end" ,    
-        position:"absolute",
-        right:100,  
+        left:10, 
+        position:"absolute" ,
         paddingTop:12,
+             
+            
+       
         
     }
 
