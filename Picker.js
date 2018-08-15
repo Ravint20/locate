@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Picker,Modal} from 'react-native';
-
+import Triangle from './Triangle';
 const programmingLanguages = [
     {
       label: 'Java',
@@ -9,7 +9,7 @@ const programmingLanguages = [
     {
       label: 'JavaScript',
       value: 'js',
-    },
+    }, 
     {
       label: 'Python',
       value: 'python',
@@ -56,10 +56,12 @@ export default class PickerSelect extends Component {
       onValueChange={itemValue => this.setState({ language: itemValue })}>
 
       
-       <Picker.Item   label="Java" value="java" />
+       <Picker.Item  label="Java" value="java" />
        <Picker.Item   label="JavaScript" value="js" />
     
  </Picker> 
+
+ <Triangle /> 
 
 {/*
 <Modal visible={true} transparent={true} style={{backgroundColor:"efefef"}} onRequestClose={() => console.log("hi")}></Modal>
@@ -71,9 +73,10 @@ export default class PickerSelect extends Component {
  
  const styles=StyleSheet.create({
     container:{
-       top:"2.95%",
+       top:"0%",
        position:'absolute', 
-       width:"100%"
+       width:"100%",
+       
     },
     picker:{
 
@@ -85,4 +88,4 @@ export default class PickerSelect extends Component {
           
          
     }
- })
+ }) 
