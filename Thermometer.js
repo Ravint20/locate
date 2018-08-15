@@ -31,8 +31,9 @@ const styles=StyleSheet.create({
 
     thermo:{
         
-       paddingTop:"16%",      
-        alignItems:"center" ,
+       paddingBottom:"2%",          
+        alignItems:"center" ,  
+        
         
     }
 
