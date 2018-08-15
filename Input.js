@@ -12,8 +12,8 @@ export default class Input extends Component {
  return(
  <View style={styles.container}>
   
+     
  
-
   <SearchBar
      Platform="default"    
     style={styles.search}  
@@ -25,19 +25,22 @@ export default class Input extends Component {
     alignItems="center"
     width="100%"
     containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 4}} 
-    inputStyle={{backgroundColor: 'white',fontSize:15,paddingLeft:30} }  
-   
+    inputStyle={{backgroundColor: 'white',fontSize:20,paddingLeft:40} }  
+          
     
  
   />
-   
+
+  
+  <Hamburger /> 
   <CancelIcon />
+ 
   <Microphone />
-  <Hamburger />
+  
 
 
 
-</View> 
+</View>  
         
  )
       
@@ -51,7 +54,7 @@ const styles = StyleSheet.create({
   container:{
   position:"absolute",
    top:"7%", 
-  width:"100%",
+  width:"100%", 
  
   
  
