@@ -1,12 +1,13 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Picker,Modal,Image,Dimensions,TouchableOpacity} from 'react-native';
 import Thermometer from './Thermometer'; 
+import Direction from './Direction';;
 export default class Container extends Component {
 
     render()
 
     {
-
+  
      return(
 
         <View style={styles.box}>
@@ -16,42 +17,31 @@ export default class Container extends Component {
 
         <Image style={styles.image} source={require("./image/crysbro.png")}/> 
        
-
-        <View
+ 
+        <View 
            style={{
            borderBottomColor: 'black', 
            borderBottomWidth: 1, 
-           width:"100%" ,
+           width:"100%" , 
            opacity:0.05  ,
            marginBottom:30 
+            
            
-           
-                    
+                     
                }}
                 />
 
                 <TouchableOpacity
-      style = {{
-        borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 4,
-        width: Dimensions.get('window').width * 0.15,
-        height: Dimensions.get('window').width * 0.15,
-        backgroundColor:'#434343',
-        justifyContent: 'center',  
-        alignItems: 'center',
-        opacity:0.1,
-        left:"42%",
-        bottom:0 ,
-        position:"absolute",
-        borderColor:"#434343"
-      }}
-      underlayColor = '#ccc'
-     
+      
+           
     > 
       
     </TouchableOpacity>
 
+    
+
      <Thermometer
-        
+         
         style={styles.thermo}    
        
       />
@@ -91,6 +81,7 @@ export default class Container extends Component {
          marginHorizontal:"30%", 
           marginTop:20,
           position:"absolute"
+          
         }, 
 
         image:{
