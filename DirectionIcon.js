@@ -17,8 +17,8 @@ render(){
        <TouchableOpacity onPress={() =>{console.log("this is temperature")}} 
        style = {{
         borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 4,
-        width: Dimensions.get('window').width * 0.15,
-        height: Dimensions.get('window').width * 0.15,
+        width: Dimensions.get('window').width * 0.20,
+        height: Dimensions.get('window').width * 0.20,
         backgroundColor:'#4286F5',
         justifyContent: 'center',  
         alignItems: 'center',
@@ -27,7 +27,7 @@ render(){
         bottom:0 ,
         position:"absolute",
         borderColor:"#434343",
-        borderWidth:2  
+        borderWidth:0.5  
       }}         
       underlayColor = '#ccc' >      
 
@@ -37,8 +37,8 @@ render(){
       
    
 
-       < Icon reverse={true} name='directions'    size={30}  color="black"   />  
-        
+       < Icon reverse={true} name='directions'    size={35}  color="#ffffff"   />  
+         
        </TouchableOpacity>    
       
      
@@ -56,8 +56,8 @@ const styles=StyleSheet.create({
         
         
        position:'absolute',
-        right:'10%',
-         bottom:'22%' 
+        right:'25%', 
+         bottom:'19%' 
          
     }
 
