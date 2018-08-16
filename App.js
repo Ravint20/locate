@@ -8,21 +8,27 @@ import PickerSelect from './components/Picker';
 import GooglePlacesInput from './components/GooglePlacesInput';
 import Container from './components/Container';
 import Input from './components/Input';
+import CancelIcon from './components/CancelIcon';
+import DirectionIcon from './components/DirectionIcon';
+
+
 
 export default class App extends React.Component {
   render() {
     
-    return ( 
+    return (  
       
       <View style={styles.container}>
         <StatusBar hidden={true} />
         
         <Map />
         <PickerSelect />
+        
         <Input /> 
+        
        
         <Container />
-        
+        <DirectionIcon />
         <Actionbutton /> 
         
 
