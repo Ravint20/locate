@@ -64,8 +64,9 @@ export default class Container extends Component {
           width:"100%",
           backgroundColor:"#ffffff", 
           opacity:1,
-           bottom:0,
+           bottom:0,  
            position:"absolute"
+        
       
         },
 
