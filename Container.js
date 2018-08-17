@@ -1,7 +1,9 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Picker,Modal,Image,Dimensions,TouchableOpacity} from 'react-native';
 import Thermometer from './Thermometer'; 
-import Direction from './Direction';;
+import Direction from './Direction';
+import Actionbutton from './Actionbutton';
+
 export default class Container extends Component {
 
     render()
@@ -38,7 +40,9 @@ export default class Container extends Component {
       
     </TouchableOpacity>
 
-    
+   
+
+    <Actionbutton /> 
 
      <Thermometer
          
