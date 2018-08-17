@@ -17,8 +17,8 @@ render(){
        <TouchableOpacity onPress={() =>{console.log("this is temperature")}} 
        style = {{
         borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 4,
-        width: Dimensions.get('window').width * 0.20,
-        height: Dimensions.get('window').width * 0.20,
+        width: Dimensions.get('window').width * 0.18,
+        height: Dimensions.get('window').width * 0.18,
         backgroundColor:'#4286F5',
         justifyContent: 'center',  
         alignItems: 'center',
@@ -53,10 +53,10 @@ render(){
 const styles=StyleSheet.create({
    
     directionIcon:{
-        
+         
         
        position:'absolute',
-        right:'25%', 
+        right:'22%',   
          bottom:'19%' 
          
     }
