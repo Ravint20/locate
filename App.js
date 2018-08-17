@@ -26,9 +26,10 @@ export default class App extends React.Component {
         
         <Input /> 
         
-       
+        
         <Container />
-        <DirectionIcon />
+        <DirectionIcon /> 
+       
         <Actionbutton /> 
         
 
@@ -50,3 +51,4 @@ const styles = StyleSheet.create({
   
 
 });
+
