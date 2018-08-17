@@ -3,13 +3,14 @@ import { StyleSheet, Text, View,TextInput,Platform,StatusBar} from 'react-native
 import { Constants } from 'expo';
 
 import Map from './components/Map';
-import Actionbutton from './components/Actionbutton';
+
 import PickerSelect from './components/Picker';
 import GooglePlacesInput from './components/GooglePlacesInput';
 import Container from './components/Container';
 import Input from './components/Input';
 import CancelIcon from './components/CancelIcon';
 import DirectionIcon from './components/DirectionIcon';
+
 
 
 
@@ -28,9 +29,9 @@ export default class App extends React.Component {
         
         
         <Container />
-        <DirectionIcon /> 
-       
-        <Actionbutton /> 
+        
+        <DirectionIcon />       
+        
         
 
      </View>
@@ -51,4 +52,3 @@ const styles = StyleSheet.create({
   
 
 });
-
