@@ -2,11 +2,22 @@ import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ActionButton from 'react-native-action-button';
+import AddItem from './AddItem';
+import {createStackNavigator} from 'react-navigation';
 
-export default class Actionbutton extends Component {
+  class Actionbutton extends Component {
+
+  constructor(props){
+super(props) 
+
+  }
 
 render()
+
 {
+
+const { navigate } = this.props.navigation;
+ 
 
 
 return(
@@ -14,9 +25,8 @@ return(
 <ActionButton 
   size={80}
   buttonColor="#FF9900"
-  onPress={() => { console.log("hi")}}
-  offsetY={20}
-  offsetX={20}
+  onPress={ ()=> navigate("Add")}
+   
 
   />
   
@@ -27,3 +37,12 @@ return(
 }
 
 }
+
+const  navigator = createStackNavigator({
+
+  Action: { screen: ActionButton },
+  Add: { screen: AddItem },
+});
+export default navigator;
+
+
