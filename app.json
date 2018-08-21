@@ -5,12 +5,13 @@
     "icon": "",
     "version": "1.0.0",
     "slug": "locate",
+    "orientation":"portrait",
     
     "ios": {
       "bundleIdentifier": "comercial.app",
       "config": {
 
-        "googleMaps": {
+        "branch": {
           
           "apiKey": "AIzaSyCWqTaLF8B0s1MfGoCdjYus8UnGhEE5DWM"
         }
