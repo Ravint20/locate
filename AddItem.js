@@ -1,19 +1,33 @@
 import React,{Component} from 'react';
-import {View,Text,TextInput,StyleSheet} from 'react-native';
+import {View,Text,TextInput,StyleSheet,Button,AppRegistry} from 'react-native';
+import {createStackNavigator,TabNavigator} from 'react-navigation';
+import Home from './Home';
+import {connect} from 'react-redux';
+import {bindActionCreators} from "redux";
+import * as Actions from "./action/index";
 
 
-export default class AddItem extends Component{
+  class AddItem extends Component{ 
+    constructor(props){
 
- rende() {
+     super(props);
+   
+    }
+
+ render() {
 
 
 
     return(
 
        
-        <View style={styles.textInput}>
+        <View style={styles.textInput}>    
 
          <TextInput  placeholder="Enter A Truck Number"  />
+
+         <Button title="ADD" onPress={() => console.log("hi")} /> 
+
+         <Button title="CANCEL" onPress={() => console.log("hi")}/>
 
 
 
@@ -33,7 +47,7 @@ export default class AddItem extends Component{
 
 }
 
-const style =StyleSheet.create({
+const styles =StyleSheet.create({
 
 textInput:{
 
@@ -51,3 +65,24 @@ textInput:{
 
 
 })
+
+function mapStateToProps(state, props) {
+    return {
+    //loading: state.getProjectsReducer.loading,
+    //projects: state.getProjectsReducer.projects
+    }
+    }
+    
+    function mapDispatchToProps(dispatch) {
+    return bindActionCreators(Actions, dispatch);
+    }
+    
+    export default connect(mapStateToProps, mapDispatchToProps)(AddItem);
+
+ 
+
+
+
+
+
+  
