@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, Text, View,TextInput,Platform,StatusBar,KeyboardAvoidingView,AppRegistry} from 'react-native';
+import React,{Component} from 'react';
+import { StyleSheet,Image, Text, View,TextInput,Platform,StatusBar,KeyboardAvoidingView,AppRegistry,TouchableOpacity,Button} from 'react-native';
 import { Constants } from 'expo';
 
 import Map from './Map';
@@ -11,11 +11,20 @@ import Input from './Input';
 import CancelIcon from './CancelIcon';
 import DirectionIcon from './DirectionIcon';
 import {createStackNavigator,TabNavigator} from 'react-navigation';     
-import ActionButton from './Actionbutton';
+import Actionbutton from './Actionbutton';
+import AddItem from './AddItem';
+import {connect} from 'react-redux';
+import {bindActionCreators} from "redux";
+import * as Actions from "./action/index";
+import Thermometer from './Thermometer';  
 
+  class Home extends Component {
+  constructor(props){
 
- export default class Home extends React.Component {
-  
+    super(props);
+
+   }
+   
   render() {
   
     return (   
@@ -29,13 +38,9 @@ import ActionButton from './Actionbutton';
          
         <Input /> 
           
-        
         <Container />
         
-        <DirectionIcon />       
         
-        
-
      </KeyboardAvoidingView>
       
     )
@@ -52,6 +57,25 @@ const styles = StyleSheet.create({
 
   },
 
+ 
+
+ 
+
   
 
 });
+
+function mapStateToProps(state, props) {
+  return {
+  //loading: state.getProjectsReducer.loading,
+  //projects: state.getProjectsReducer.projects
+  }
+  }
+  
+  function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Home);
+
+  
