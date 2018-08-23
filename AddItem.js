@@ -21,14 +21,31 @@ import * as Actions from "./action/index";
     return(
 
        
-        <View style={styles.textInput}>    
+        <View style={styles.container}>
 
-         <TextInput  placeholder="Enter A Truck Number"  />
+        <Text style={styles.id1}>ID: </Text>    
+         <View style={styles.id} >
+         
+         <TextInput style={styles.textInput}  underlineColorAndroid='transparent' placeholder="Enter A Truck Number"  />
 
-         <Button title="ADD" onPress={() => console.log("hi")} /> 
+         </View>
 
-         <Button title="CANCEL" onPress={() => console.log("hi")}/>
+          <Text style={styles.password1}>PASSWORD: </Text>
+          <View style={styles.password}>
+         
+         <TextInput placeholder="Enter a password"  underlineColorAndroid='transparent' />
+         </View>
+          
+          
+         <View style={styles.addbutton}>
+         
+         <Button    title="ADD" onPress={() => console.log("hi")} /> 
+          </View>
 
+          <View style={styles.cancelbutton}>
+         <Button  style={styles.button} title="CANCEL" onPress={() => console.log("hi")}/>
+         
+         </View>
 
 
         </View>
@@ -49,18 +66,64 @@ import * as Actions from "./action/index";
 
 const styles =StyleSheet.create({
 
-textInput:{
+container:{
 
     justifyContent:"center",
-    alignItems:"center",
+
     backgroundColor:"#ffffff",
-      width:"20%",
-      height:"20%"
+      width:"100%",
+      height:"100%"
 
 
 
 
-}
+},
+id1:{
+
+    left:"15%"    
+
+},
+
+id:{
+   
+    borderWidth:2,
+    width:"75%",
+    left:"15%",
+    marginTop:"2%",
+    paddingHorizontal:"5%"
+},
+
+password1:{
+
+    left:"15%",
+    marginTop:"5%"  
+
+},
+password:{
+       
+    borderWidth:2,
+    width:"75%",
+    left:"15%",
+    marginTop:"2%",
+    paddingHorizontal:"5%"
+
+},
+   
+
+addbutton:{
+  width:"30%",
+  left:"15%",
+  marginTop:"4%"
+
+},
+
+
+cancelbutton:{
+    width:"30%", 
+    left:"60%",
+   
+  
+  }
 
 
 
