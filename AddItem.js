@@ -36,7 +36,10 @@ import * as Actions from "./action/index";
          <TextInput placeholder="Enter a password"  underlineColorAndroid='transparent' />
          </View>
           
-          
+          <View  style={{flexDirection:"row",paddingHorizontal:"15%"}}>
+
+
+
          <View style={styles.addbutton}>
          
          <Button    title="ADD" onPress={() => console.log("hi")} /> 
@@ -45,7 +48,13 @@ import * as Actions from "./action/index";
           <View style={styles.cancelbutton}>
          <Button  style={styles.button} title="CANCEL" onPress={() => console.log("hi")}/>
          
+         </View>  
+         
+
+
+
          </View>
+
 
 
         </View>
@@ -111,18 +120,19 @@ password:{
    
 
 addbutton:{
-  width:"30%",
-  left:"15%",
-  marginTop:"4%"
-
+  width:"50%",
+ 
+  marginTop:"6%",
+ borderRadius:5
 },
 
 
 cancelbutton:{
-    width:"30%", 
-    left:"60%",
+    width:"50%", 
    
-  
+    marginTop:"6%",
+     marginHorizontal:"7%"  
+        
   }
 
 
@@ -130,7 +140,7 @@ cancelbutton:{
 })
 
 function mapStateToProps(state, props) {
-    return {
+    return { 
     //loading: state.getProjectsReducer.loading,
     //projects: state.getProjectsReducer.projects
     }
