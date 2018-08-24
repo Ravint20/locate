@@ -10,7 +10,7 @@ const programmingLanguages = [
       label: 'JavaScript',
       value: 'js',
     }, 
-    {
+    { 
       label: 'Python',
       value: 'python',
     },
@@ -55,9 +55,9 @@ export default class PickerSelect extends Component {
       selectedValue={this.state.language}
       onValueChange={itemValue => this.setState({ language: itemValue })}>
 
-      
-       <Picker.Item  label="Java" value="java" />
-       <Picker.Item   label="JavaScript" value="js" />
+        <Picker.Item color="#FF9900" label="SELECT CONTAINER" value="SELECT CONTAINER" /> 
+       <Picker.Item color="#FF9900" label="Java" value="java" /> 
+       <Picker.Item  color="#FF9900" label="JavaScript" value="js" />   
     
  </Picker> 
 
