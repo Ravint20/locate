@@ -16,7 +16,9 @@ import AddItem from './AddItem';
 import {connect} from 'react-redux';
 import {bindActionCreators} from "redux";
 import * as Actions from "./action/index";
-import Thermometer from './Thermometer';  
+import Thermometer from './Thermometer'; 
+import Icon from 'react-native-vector-icons/Ionicons';
+import ActionButton from 'react-native-action-button'; 
 
   class Home extends Component {
   constructor(props){
@@ -34,18 +36,21 @@ import Thermometer from './Thermometer';
         <StatusBar hidden={true} />
         
         <Map />
-        <PickerSelect />    
-         
-        <Input /> 
+        <PickerSelect />        
           
         <Container />
+
+        <ActionButton 
+        size={80}
+        buttonColor="#FF9900"
+        onPress={()=> this.props.navigation.navigate('AddItem')} />
         
         
      </KeyboardAvoidingView>
       
     )
-  }
-}
+  }  
+}  
 
  
 const styles = StyleSheet.create({
