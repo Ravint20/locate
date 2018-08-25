@@ -33,7 +33,7 @@ import * as Actions from "./action/index";
           <Text style={styles.password1}>PASSWORD: </Text>
           <View style={styles.password}>
          
-         <TextInput placeholder="Enter a password"  underlineColorAndroid='transparent' />
+         <TextInput placeholder="Enter a password" secureTextEntry={true} underlineColorAndroid='transparent' />
          </View>
           
           <View  style={{flexDirection:"row",paddingHorizontal:"15%"}}>
@@ -78,7 +78,6 @@ const styles =StyleSheet.create({
 container:{
 
     justifyContent:"center",
-
     backgroundColor:"#ffffff",
       width:"100%",
       height:"50%"
