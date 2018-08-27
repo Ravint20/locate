@@ -18,7 +18,7 @@ export default class GooglePlacesInput extends Component{
   
          <GooglePlacesAutocomplete
          
-      placeholder='Search'
+      placeholder='Search on google map'
       minLength={2} // minimum length of text to search
       autoFocus={false}
       returnKeyType={'search'} // Can be left out for default return key https://facebook.github.io/react-native/docs/textinput.html#returnkeytype
@@ -47,22 +47,22 @@ export default class GooglePlacesInput extends Component{
           overflow: 'visible',
           flexGrow: 1,
           display: 'flex', 
-          backgroundColor:"rgb(255,100,200)",
+          backgroundColor:"#fff", 
           borderTopWidth: 0,
           borderBottomWidth: 0,
           height: 50,
           overflow: 'visible',
           flexShrink:1
         
-        }, 
+        },  
 
         listView: {
           position: 'absolute',
           marginTop: 40,
           backgroundColor: 'green',
-          elevation: 3,
-          zIndex: 10,
-          elevation:1
+         
+          zIndex: 16,
+      
            
       },
  
@@ -108,10 +108,7 @@ export default class GooglePlacesInput extends Component{
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      justifyContent: 'center',
-      marginBottom:0,
+      width:"100%",
       position: 'absolute',
       top: 0
       

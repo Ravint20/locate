@@ -1,54 +1,89 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Platform} from 'react-native';
 import {SearchBar} from "react-native-elements";
-
+import CancelIcon from './CancelIcon';
+import Microphone from './Microphone';
+import Hamburger from './Hamburger';
 
 
 export default class Input extends Component {
-    render(){
-     
+
+
+  constructor(props){
+   super(props);
+
+
+  }
+
+  
+
+  
+    render(){ 
+   
  return(
  <View style={styles.container}>
- 
-
+  
+     
+  
   <SearchBar
-
-    
-    placeholder="search on google map" 
+     Platform="default"    
+    style={styles.search} 
+    ref={search =>this.search=search} 
+    placeholder="Search Google Map" 
     searchIcon={false}
-    showLoading
-    platform="android"
+    showLoading={true} 
     cancelIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-    justifyContent="center"
+    justifyContent="center" 
     alignItems="center"
+    width="100%"
+    containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 4}} 
+    inputStyle={{backgroundColor: 'white',fontSize:20,paddingLeft:40} }  
+      
     
-    containerStyle={{ display:""}}
-
+    
+ 
   />
 
+  
+  
+  <CancelIcon   />
+ 
+  <Microphone />
+  
 
 
-</View>
+
+</View>    
         
  )
       
 }
-
+  
 
 }
 
 
 const styles = StyleSheet.create({
   container:{
+  position:"absolute",
+   top:"7%", 
+  width:"100%", 
+ 
   
+ 
   },
   input : {
   
-     width:350,
-      
-      top:0,
+     width:"90%",
       padding:10
 
+  },
+  search:{
+
+   
+    
+
+
   }
-  
 });
+

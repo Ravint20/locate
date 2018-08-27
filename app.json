@@ -5,9 +5,19 @@
     "icon": "",
     "version": "1.0.0",
     "slug": "locate",
+    "orientation":"portrait",
     
     "ios": {
-      "bundleIdentifier": "comercial.app"
+      "bundleIdentifier": "comercial.app",
+      "config": {
+
+        "branch": {
+          
+          "apiKey": "AIzaSyCWqTaLF8B0s1MfGoCdjYus8UnGhEE5DWM"
+        }
+
+      }
+
 
     },
     "android": {
@@ -16,5 +26,6 @@
         "googleMaps": { "apiKey": "AIzaSyCWqTaLF8B0s1MfGoCdjYus8UnGhEE5DWM" }   
      }
     }
+    
   }
 }

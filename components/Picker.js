@@ -1,6 +1,6 @@
 import React,{Component} from "react";
-import {Text,StyleSheet,View,TextInput,Picker,Modal} from 'react-native';
-
+import {Text,StyleSheet,View,TextInput,Picker,Modal,ScrollView} from 'react-native';
+import Triangle from './Triangle';
 const programmingLanguages = [
     {
       label: 'Java',
@@ -9,8 +9,8 @@ const programmingLanguages = [
     {
       label: 'JavaScript',
       value: 'js',
-    },
-    {
+    }, 
+    { 
       label: 'Python',
       value: 'python',
     },
@@ -42,43 +42,83 @@ export default class PickerSelect extends Component {
         super(props);
         this.state = {
           
-          language: 'hi',
+          language: '',
+          labelName:" ",
+        
         };
       }
-    render(){
-     
+
+      onValueChange2(value,label){
+      
+
+        this.setState(
+          {
+         language:value,
+         labelName:label
+
+          }
+        )
+
+
+      }
+    render(){    
+      
+      const description =[]
+
+      {
+
+        programmingLanguages.map((y,x) =>{
+
+          description.push(<Picker.Item label={y.label} key={x} value={y.label} />)
+
+        })
+
+      }
+        
  return(
 
-    <View style={styles.container}>
-    <Picker  style={{padding:10,width:"100%",backgroundColor:"#434343"}} mode="dropdown"
+    <View style={styles.container}> 
+
+    
+        
+    <Picker  style={{padding:20,width:"100%",backgroundColor:"#434343"}} itemStyle={{paddingHorizontal:20,textAlign:"center"}} mode="dropdown"  
       
       selectedValue={this.state.language}
-      onValueChange={itemValue => this.setState({ language: itemValue })}>
+      onValueChange={() => this.onValueChange2}>
+        
+      <ScrollView> {description} </ScrollView>   
 
-      
-       <Picker.Item   label="Java" value="java" />
-       <Picker.Item   label="JavaScript" value="js" />
-    
- </Picker> 
+       </Picker> 
+       
+          
+         
+ 
+             
+ <Triangle />    
 
 {/*
 <Modal visible={true} transparent={true} style={{backgroundColor:"efefef"}} onRequestClose={() => console.log("hi")}></Modal>
 */}
-  </View>
-
+  </View>       
+ 
  )}}
 
  
  const styles=StyleSheet.create({
     container:{
-  
+       top:"0%",
+       position:'absolute', 
+       width:"100%",
+       
     },
-
     picker:{
-         
+
+       
+       
         height:20,
          width:"100%",
-        padding:10
-
+        padding:10          
+          
+         
     }
- })
+ }) 
