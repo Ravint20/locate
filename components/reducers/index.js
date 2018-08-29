@@ -2,7 +2,10 @@ import {combineReducers} from 'redux';
 
 import {
     ADD_PROJECTS
-} from "../action/index"
+} from "../action/index";
+
+
+import APP_DATA from '../action/saveAction';
 
 let initialStateProjects = {
     projects: [],
@@ -19,8 +22,26 @@ const getProjectsReducer = (state = initialStateProjects, action) => {
     }
 };
 
+let initialStateProjects = {
+    appData: [],
+    loading: true
+};
+
+const getAppData = (state = initialStateProjects, action) => {
+    switch (action.type) {
+        case PP_DATA:
+            state = Object.assign({}, state, {appData: action.appData, loading: action.loading});
+            return state;
+        default:
+            return state;
+    }
+};
+
+
 const rootReducer = combineReducers({
     getProjectsReducer: getProjectsReducer,
+    getAppData:getAppData,
+
 });
 
 export default rootReducer;

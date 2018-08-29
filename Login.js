@@ -48,7 +48,7 @@ export default class Login extends Component {
       },
       body: JSON.stringify({
      
-        name:Nmae,
+        name:Name,
         password:password,
      
         

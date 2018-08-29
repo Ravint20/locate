@@ -1,40 +1,7 @@
 import React,{Component} from "react";
 import {Text,StyleSheet,View,TextInput,Picker,Modal,ScrollView} from 'react-native';
 import Triangle from './Triangle';
-const programmingLanguages = [
-    {
-      label: 'Java',
-      value: 'java',
-    },
-    {
-      label: 'JavaScript',
-      value: 'js',
-    }, 
-    { 
-      label: 'Python',
-      value: 'python',
-    },
-    {
-      label: 'Ruby',
-      value: 'ruby',
-    },
-    {
-      label: 'C#',
-      value: 'csharp',
-    },
-    {
-      label: 'C++',
-      value: 'cpp',
-    },
-    {
-      label: 'C',
-      value: 'c',
-    },
-    {
-      label: 'Go',
-      value: 'go',
-    }
-  ];
+
 
 export default class PickerSelect extends Component {
 

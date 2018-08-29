@@ -1,4 +1,4 @@
-export const ADD_PROJECTS = 'ADD_PROJECTS';
+export const APP_DATA = 'APP_DATA';
 export function getProjects() {
 
     const URL = "http://api-scada.senzmate.com:9014/" + "project";
@@ -16,21 +16,15 @@ export function getProjects() {
             .then((responseJson) => {
                 setTimeout(() => {
                     const projects = responseJson.content;
-                    dispatch({type: ADD_PROJECTS, projects: projects,loading:false});
+                    dispatch({type: APP_DATA, appData:appData,loading:false});
                 }, 2000);
 
             })
             .catch((error) => {
                 console.error(error);
                 dispatch({
-                    type: ADD_USER,
-                    accessToken: null,
-                    tokenType: {},
-                    refreshToken: null,
-                    expiresIn: {},
-                    scope: {},
-                    authorities: [],
-                    userName:null
+                    type: APP_DATA,
+                    
                 });
                 throw error;
             });

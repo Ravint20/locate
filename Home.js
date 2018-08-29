@@ -26,7 +26,7 @@ import ActionButton from 'react-native-action-button';
       this.state = {
         
          isLoading:true,
-        dataSource:true
+        dataSource:null
       
       };
     }
@@ -40,9 +40,9 @@ import ActionButton from 'react-native-action-button';
          this.setState({
 
            isLoading:false,
-           dataSource:responseJson.content
+           dataSource:responseJson.content,
 
-
+          
 
          })
 

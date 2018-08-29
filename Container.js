@@ -8,6 +8,12 @@ import * as Actions from "./action/index";
 
 export default class Container extends Component {
 
+
+    componentDidMount(){
+
+     const appDetail = store.getState.getAppData.appData;
+
+    }
     render()
 
     {
@@ -44,7 +50,7 @@ export default class Container extends Component {
 
      <Button style={styles.logout }title="LogOut" onPress={()=> this.props.navigation.navigate("Login")} />
 
-   
+              
 
     <Actionbutton /> 
 
@@ -118,8 +124,8 @@ export default class Container extends Component {
 
     function mapStateToProps(state, props) {
         return {
-        //loading: state.getProjectsReducer.loading,
-        //projects: state.getProjectsReducer.projects
+        loading: state.getAppData.loading,
+        appData: state.getAppData.appData
         }
         }
         
