@@ -5,7 +5,68 @@ import * as Actions from "./action/index";
 
 
 export default class Login extends Component {
+    constructor(props) {
+ 
+        super(props)
+     
+        this.state = {
+     
+          Name: '',
+          password:"",
+          
+        }
+     
+      }
 
+      cancell(){
+      
+         this.setState({
+
+
+             Nmae="",
+             password:""
+
+         })
+
+
+      }
+     
+      InsertDataToServer = () =>{
+     
+     
+     const { Name }  = this.state ;
+     const {password} =this.state;
+     
+     
+     
+     
+    fetch('API', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+     
+        name:Nmae,
+        password:password,
+     
+        
+     
+      })
+     
+    }).then((response) => response.json())
+          .then((responseJson) => {
+     
+    
+            Alert.alert(responseJson);
+     
+          }).catch((error) => {
+            console.error(error);
+          });
+     
+        
+      }
 
 render(){
 
@@ -14,10 +75,10 @@ render(){
 
          <View style={styles.container}>
 
-         <TextInput placeholder="Enter Name" />
-         <TextInput placeholder="Enter Password" />
+         <TextInput placeholder="Enter Name"  onChangeText={Name => this.setState({Name})}/>
+         <TextInput placeholder="Enter Password"  onChangeText={password => this.setState({password})}/>
          <Button title="Login" onPress={()=> this.props.navigation.navigate("Home")} />
-         <Button  style={styles.register} title="Register" onPress={()=> this.props.navigation.navigate("Register")} />
+        
 
          </View>
 

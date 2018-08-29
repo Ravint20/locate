@@ -60,16 +60,10 @@ const styles = StyleSheet.create({
 });
 
 const Navigator =createStackNavigator({
-<<<<<<< HEAD
   Login:{screen:Login},
   Home:{screen:Home,},
   AddItem:{screen:AddItem},
-  RegisterForm:{RegisterForm}
-=======
-
-  Home:{screen:Home,},
-  AddItem:{screen:AddItem},
->>>>>>> fc85327fbd38396c1d3875de1331a8da26b0fb0c
+ 
 },
 
 {
